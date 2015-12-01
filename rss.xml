@@ -1,0 +1,19 @@
+<?xml version="1.0" encoidng="utf-8"?>
+<rss version="2.0">
+<channel>
+    
+<title>MakeUseOf RSS Feed</title>
+<link>http://www.makeuseof.com/</link>
+<description>Cool websites, software and internet tips</description>
+
+<item>
+    <title>Enter Title</title>
+    <link>Link to the entry</link>
+    <guid>http://example.com/item/123</guid>
+    <pubDate>Tue,1 December 2015 15:20:20 GMT</pubDate>
+    <description>[CDATA[ This is the description.]]</description>
+</item>
+
+</channel>
+</rss>
+
