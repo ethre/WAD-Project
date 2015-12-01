@@ -1,35 +1,57 @@
+html{
+    height:100%;
+}
+
+.jumbotron
+{
+    background-image:url('mainjpg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: black; 
+    background-attachment:fixed;
+    min-height:600px;
+    margin-bottom:0px;
+}
+
+.padding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 #container1
 {
-    
     background-color: grey;
-
 }
 
 #basicdiv
 {
     
-    background-color: grey;
+    background-color: white;
     height:300px;
+    color:black;
 }
 
-a:link{
-    text-decoration: none;
-    font-family: verdana;
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  color: #ffffff;
 }
 
 .main{
     position: relative;
     bottom: 0px;
     width: 100%;
-    height: 400px;
-    background-color: #142F54;
+    height: 40%;
+    background-color: #eee;
 }
 
 .middle{
     position: relative;
     bottom: 0px;
     width: 100%;
-    height: 400px;
+    height: 40%;
     background-color: #4C678C; 
 }
 
@@ -37,7 +59,7 @@ a:link{
     position: relative;
     bottom: 0px;
     width: 100%;
-    height: 400px;
+    height: 40%;
     background-color: #8080ff; 
 }
 
