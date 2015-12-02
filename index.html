@@ -11,8 +11,33 @@
 
 		<script src="js/bootstrap.js"></script>
 		<script src="js/modernizr.js"></script> 
+
+
 	</head>
 	<body>
+		<!-- Pulls info from XML -->
+		<script>
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		    if (xhttp.readyState == 4 && xhttp.status == 200) {
+		        myFunction(xhttp);
+		    }
+		};
+		xhttp.open("GET", "catalog.xml", true);
+		xhttp.send();
+
+		function myFunction(xml) {
+		    var xmlDoc = xml.responseXML;
+		    document.getElementById("prod1").innerHTML =
+		    xmlDoc.getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+		    document.getElementById("type1").innerHTML =
+		    xmlDoc.getElementsByTagName("TYPE")[0].childNodes[0].nodeValue;
+		    
+		    document.getElementById("prod2").innerHTML =
+		    xmlDoc.getElementsByTagName("TITLE")[2].childNodes[0].nodeValue;
+		}
+		</script>
+		
 		<header class="cd-header">
 		<!-- Logo Placeholder -->
 		<div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
@@ -70,8 +95,8 @@
 						<a href="#0">
 							<div id="subCont1">
 								<img class="img-rounded" src="http://media.firebox.com/pic/p6970_column_grid_3.jpg" width="40%" height="100%"/>
-								<p class="edChoice text-center">Editors' Picks</p>
-								<p class="itemType text-center">Gifts for Her</p>
+								<p id="prod1" class="edChoice text-center"></p>
+								<p id="type1" class="itemType text-center"></p>
 							</div>
 						</a>
 					</div>
@@ -80,7 +105,7 @@
 						<a href="#0">
 							<div id="subCont1">
 								<img class="img-rounded" src="http://media.firebox.com/pic/p7433_column_grid_3.jpg" width="40%" height="100%"/>
-								<p class="edChoice text-center">Editors' Picks</p>
+								<p id="prod2" class="edChoice text-center"></p>
 								<p class="itemType text-center">Gifts</p>
 							</div>
 						</a>
@@ -92,8 +117,8 @@
 						<a href="#0">
 							<div id="subCont2">
 								<img class="img-rounded" src="http://media.firebox.com/pic/p7215_column_grid_3.gif" width="100%" height="70%"/>
-								<p class="related text-center">Related Items</p>
-								<p class="itemType2 text-center">Gifts for Him ( ͡° ͜ʖ ͡°)</p>
+								<p id="prod3" class="related text-center">Related Items</p>
+								<p class="itemType2 text-center">Gifts for Him</p>
 							</div>
 						</a>
 					</div>
