@@ -1,160 +1,151 @@
 <!DOCTYPE html>
 <html>
-   <head>
-    
-      <title>Bootstrap 101 Template</title>
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-      <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-      
-      <link href="style.css" rel="stylesheet">
-   
-      <script src="bootstrap/js/bootstrap.min.js"></script>
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- 
- 
-      <script>
-       
-       while($row = mysql_fetch_array($result))
-       {
-         $items .= '<item>
-         <title>'.$row["title"].'</title>
-         <link>'.$row["link"].'</link>
-         <descriptiion><![CDATA['.$row["description"].']]></description>
-         </item>';
-         
-       }
-       
-       echo $items;
-       
-     </script>
- 
- 
-   </head>
-   
-  <body>
-   
-    <div class="navbar-static-top navbar-inverse">
-      <div class="container">
-        <div class="navbar-brand">
-          <a href="#">My Site</a>
-        </div>
-         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-      Menu
-    </button>
-        <div class="collapse navbar-collapse navHeaderCollapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          
-        </div> 
-      </div>
-    </div>
-    
-    <div class="jumbotron">
-      <div class="container">
-        <h1>This is a jumbo bumbo</h1>
-        <br />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo mi vitae luctus tristique. In ultricies lacus in ante dignissim rhoncus. Donec diam est, vulputate quis ullamcorper vel, fermentum in lectus. Suspendisse finibus sollicitudin tortor vel facilisis. Proin fermentum, arcu at aliquam tempor, lectus odio semper neque, at dignissim mauris nisi ac quam. Cras mattis libero arcu, quis facilisis purus congue vitae. Donec quis urna id ipsum condimentum tristique. Vivamus sit amet purus eros. Nulla scelerisque tortor quis pellentesque pellentesque. Ut ut facilisis nulla. Sed id tempor augue, non pharetra nisi.</p>
-        <br />
-        <p><a href="#" target="_blank" class="btn btn-primary btn-lg">Ayy baby, button!<a></p>
-      </div>
-    </div>
-  
-  <!-- Test Sections -->
-  <div class="main" id="mainSec">
-      <div class="container">
-          <div class="row">
-            <div class="col-md-6" id="basicdiv">
-              <h1 class="text-center padding">Relative items</h1>
-              <p class="text-justify padding">Etiam eu ante dui. Vestibulum fringilla, turpis finibus rutrum ullamcorper, ipsum arcu lacinia ante, vitae placerat augue felis eu diam. Donec tincidunt justo molestie cursus placerat. Nullam justo arcu, fermentum eget consequat sed, consequat vitae lorem. Donec sollicitudin tempus leo non venenatis.</p>
-            </div>
-            <div class="col-md-6" id="basicdiv">
-              <h1 class="text-center padding">Relative items</h1>
-              <p class="text-justify padding">Etiam eu ante dui. Vestibulum fringilla, turpis finibus rutrum ullamcorper, ipsum arcu lacinia ante, vitae placerat augue felis eu diam. Donec tincidunt justo molestie cursus placerat. Nullam justo arcu, fermentum eget consequat sed, consequat vitae lorem. Donec sollicitudin tempus leo non venenatis.</p>
-            </div>
-          </div>
-      </div>
-  </div>
-  
-  <div class="middle" id="middleSec">
-     <div class="container">
-      <div class="row padding">
-        <div class="col-md-6">
-          <img class="img-circle img-responsive padding"src="mushy.gif"/>
-        </div>
-        <div class="col-md-6">
-          <h1>This is a title</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante sem, commodo ac condimentum sit amet, bibendum eu dui. Nam porta massa eu nisl aliquet, at rutrum quam malesuada. Cras hendrerit fermentum gravida. Suspendisse id vestibulum nisi. Sed malesuada posuere pulvinar. Fusce sagittis auctor neque, in lobortis tellus eleifend ut. Quisque metus odio, condimentum eleifend dapibus non, sodales a erat. Ut quis mi pulvinar odio porta imperdiet. Cras maximus erat nulla, et pharetra ipsum mattis at. Fusce cursus orci scelerisque vestibulum ornare.
-Etiam eu ante dui. Vestibulum fringilla, turpis finibus rutrum ullamcorper, ipsum arcu lacinia ante, vitae placerat augue felis eu diam. Donec tincidunt justo molestie cursus placerat. Nullam justo arcu, fermentum eget consequat sed, consequat vitae lorem. Donec sollicitudin tempus leo non venenatis. Morbi rhoncus sodales sollicitudin. Vivamus ac lobortis sem. Proin porttitor odio ullamcorper rhoncus ullamcorper.</p>
-        </div>
-      </div>
-      
-      <hr>
-  
-      <div class="row padding">
-        <div class="col-md-6">
-          <h1>This is a title</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante sem, commodo ac condimentum sit amet, bibendum eu dui. Nam porta massa eu nisl aliquet, at rutrum quam malesuada. Cras hendrerit fermentum gravida. Suspendisse id vestibulum nisi. Sed malesuada posuere pulvinar. Fusce sagittis auctor neque, in lobortis tellus eleifend ut. Quisque metus odio, condimentum eleifend dapibus non, sodales a erat. Ut quis mi pulvinar odio porta imperdiet. Cras maximus erat nulla, et pharetra ipsum mattis at. Fusce cursus orci scelerisque vestibulum ornare.
-Etiam eu ante dui. Vestibulum fringilla, turpis finibus rutrum ullamcorper, ipsum arcu lacinia ante, vitae placerat augue felis eu diam. Donec tincidunt justo molestie cursus placerat. Nullam justo arcu, fermentum eget consequat sed, consequat vitae lorem. Donec sollicitudin tempus leo non venenatis. Morbi rhoncus sodales sollicitudin. Vivamus ac lobortis sem. Proin porttitor odio ullamcorper rhoncus ullamcorper.</p>
-        </div>
-        <div class="col-md-6">
-          <img class="img-circle img-responsive padding"src="http://media.firebox.com/pic/p6970_column_grid_3.jpg"/>
-        </div>
-      </div>
-      
-      <hr>
-      
-      <div class="row padding">
-        <div class="col-md-6">
-           <img class="img-circle img-responsive padding"src="http://media.firebox.com/pic/p6970_column_grid_3.jpg"/>
-        </div>
-        <div class="col-md-6">
-          <h1>This is a title</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante sem, commodo ac condimentum sit amet, bibendum eu dui. Nam porta massa eu nisl aliquet, at rutrum quam malesuada. Cras hendrerit fermentum gravida. Suspendisse id vestibulum nisi. Sed malesuada posuere pulvinar. Fusce sagittis auctor neque, in lobortis tellus eleifend ut. Quisque metus odio, condimentum eleifend dapibus non, sodales a erat. Ut quis mi pulvinar odio porta imperdiet. Cras maximus erat nulla, et pharetra ipsum mattis at. Fusce cursus orci scelerisque vestibulum ornare.
-Etiam eu ante dui. Vestibulum fringilla, turpis finibus rutrum ullamcorper, ipsum arcu lacinia ante, vitae placerat augue felis eu diam. Donec tincidunt justo molestie cursus placerat. Nullam justo arcu, fermentum eget consequat sed, consequat vitae lorem. Donec sollicitudin tempus leo non venenatis. Morbi rhoncus sodales sollicitudin. Vivamus ac lobortis sem. Proin porttitor odio ullamcorper rhoncus ullamcorper.</p>
-        </div>
-      </div>
- 
-      <hr>
- 
-         </div>
-        </div>
-     
-  
-  <div class="middle2" id="middleSec">
-    <div class="container">
-      <h1 class="text-center padding">Items</h1>
-        <div class="row">
-          <div class="col-md-3">
-            <img class="img-thumbnail"src="http://media.firebox.com/pic/p6970_column_grid_3.jpg"/>
-          </div>
-          <div class="col-md-3">
-            <img class="img-thumbnail" src="http://media.firebox.com/pic/p7285_column_grid_3.jpg"/>
-          </div>
-          <div class="col-md-3">
-            <img class="img-thumbnail" src="http://media.firebox.com/pic/p5655_column_grid_3.jpg"/>
-          </div>
-          <div class="col-md-3">
-            <img class="img-thumbnail" src="http://media.firebox.com/pic/p7039_column_grid_3.jpg"/>
-          </div>
-        </div>
-    </div>
-  </div>
-  
-    <div class="end" id="endSec">
-      <div class="container">
-          <div class="row">
-              
-          </div>
-      </div>
-  </div>
-  
-  <!--<script src="nav.js"></script>-->
-  </body>
+	<head>
+		<title>Project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<link rel="stylesheet" href="css/bootstrap.css"><!-- Twitter Bootstrap -->
+		<link rel="stylesheet" href="css/style.css"><!-- Our Styles -->
+		<link rel="stylesheet" href="css/reset.css"><!-- CSS reset -->
+		<link rel="stylesheet" href="css/scroll.css"><!-- Fixed Alternate Image Scroll -->
+
+		<script src="js/bootstrap.js"></script>
+		<script src="js/modernizr.js"></script> 
+	</head>
+	<body>
+		<header class="cd-header">
+		<!-- Logo Placeholder -->
+		<div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+
+		<nav class="cd-main-nav">
+			<ul>
+				<!-- Insert Links Here -->
+				<li><a href="#0">Home</a></li>
+				<li><a href="#0">About</a></li>
+				<li><a href="#0">Products</a></li>
+				<li><a href="#0">Login</a></li>
+			</ul>
+		</nav> <!-- cd-main-nav -->
+	</header>
+
+	<main class="cd-main-content">
+		<div class="cd-fixed-bg cd-bg-1">
+			<h1>I Couldn't Stand How it Looked lolol</h1>
+		</div> <!-- cd-fixed-bg -->
+
+		<div class="cd-scrolling-bg cd-color-2">
+			<div class="container text-center">
+				<h2 class="subHead text-center">Selection of Oddities</h2>
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-circle" src="http://media.firebox.com/pic/p6970_column_grid_3.jpg"/>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+					</div>
+
+					<div class="col-md-4">
+						<img class="img-circle" src="http://media.firebox.com/pic/p7433_column_grid_3.jpg"/>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+					</div>
+
+					<div class="col-md-4">
+						<img class="img-circle" src="http://media.firebox.com/pic/p7267_column_grid_3.jpg"/>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+					</div>
+				</div>
+			</div> <!-- container -->
+		</div> <!-- cd-scrolling-bg -->
+
+		<div class="cd-fixed-bg cd-bg-2">
+			<h2>Lorem ipsum dolor sit amet.</h2>
+		</div> <!-- cd-fixed-bg -->
+		
+
+		<div class="cd-scrolling-bg cd-color-3">
+			<div class="container">
+			<!-- Add Content Here -->
+			<!-- itemType's potentially XML? -->
+			<h2 class="subHead text-center">Discover Items this Season</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<a href="#0">
+							<div id="subCont1">
+								<img class="img-rounded" src="http://media.firebox.com/pic/p6970_column_grid_3.jpg" width="40%" height="100%"/>
+								<p class="edChoice text-center">Editors' Picks</p>
+								<p class="itemType text-center">Gifts for Her</p>
+							</div>
+						</a>
+					</div>
+					
+					<div class="col-md-6">
+						<a href="#0">
+							<div id="subCont1">
+								<img class="img-rounded" src="http://media.firebox.com/pic/p7433_column_grid_3.jpg" width="40%" height="100%"/>
+								<p class="edChoice text-center">Editors' Picks</p>
+								<p class="itemType text-center">Gifts</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#0">
+							<div id="subCont2">
+								<img class="img-rounded" src="http://media.firebox.com/pic/p7215_column_grid_3.gif" width="100%" height="70%"/>
+								<p class="related text-center">Related Items</p>
+								<p class="itemType2 text-center">Gifts for Him ( ͡° ͜ʖ ͡°)</p>
+							</div>
+						</a>
+					</div>
+					
+					<div class="col-md-3">
+						<a href="#0">
+							<div id="subCont2">
+								<img class="img-rounded" src="http://media.firebox.com/pic/p7271_column_grid_3.gif" width="100%" height="70%"/>
+								<p class="related text-center">Related Items</p>
+								<p class="itemType2 text-center">Christmas</p>
+							</div>
+						</a>
+					</div>
+					
+					<div class="col-md-3">
+						<a href="#0">
+							<div id="subCont2">
+								<img class="img-rounded" src="http://media.firebox.com/pic/p7343_column_grid_3.gif" width="100%" height="70%"/>
+								<p class="related text-center">Related Items</p>
+								<p class="itemType2 text-center">Quirky</p>
+							</div>
+						</a>
+					</div>
+					
+					<div class="col-md-3">
+						<a href="#0">
+							<div id="subCont2">
+								<img class="img-rounded" src="http://media.firebox.com/pic/p7039_column_grid_3.jpg" width="100%" height="70%"/>
+								<p class="related text-center">Related Items</p>
+								<p class="itemType2 text-center">Board Games</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div> <!-- container -->
+		</div> <!-- cd-scrolling-bg -->
+
+		<div class="cd-fixed-bg cd-bg-3">
+			<h2>Lorem ipsum dolor sit amet.</h2>
+		</div> <!-- cd-fixed-bg -->
+
+		<div class="cd-scrolling-bg cd-color-1">
+			<div class="container">
+		
+			</div> <!-- cd-container -->
+		</div> <!-- cd-scrolling-bg -->
+
+		<div class="cd-fixed-bg cd-bg-4">
+			<h2>Lorem ipsum dolor sit amet.</h2>
+		</div> <!-- cd-fixed-bg -->
+	</main> <!-- cd-main-content -->
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
