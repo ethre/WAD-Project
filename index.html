@@ -8,19 +8,23 @@
 		<link rel="stylesheet" href="css/style.css"><!-- Our Styles -->
 		<link rel="stylesheet" href="css/reset.css"><!-- CSS reset -->
 		<link rel="stylesheet" href="css/scroll.css"><!-- Fixed Alternate Image Scroll -->
-
+		<script src="js/Chart.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/modernizr.js"></script> 
-
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/main.js"></script>
 
 	</head>
 	<body>
+		
+		
 		<!-- Pulls info from XML -->
 		<script>
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		    if (xhttp.readyState == 4 && xhttp.status == 200) {
 		        myFunction(xhttp);
+		        price(xhttp);
 		    }
 		};
 		xhttp.open("GET", "catalog.xml", true);
@@ -34,13 +38,28 @@
 		    xmlDoc.getElementsByTagName("TYPE")[0].childNodes[0].nodeValue;
 		    
 		    document.getElementById("prod2").innerHTML =
-		    xmlDoc.getElementsByTagName("TITLE")[2].childNodes[0].nodeValue;
+		    xmlDoc.getElementsByTagName("TITLE")[4].childNodes[0].nodeValue;
+		    document.getElementById("type2").innerHTML =
+		    xmlDoc.getElementsByTagName("TYPE")[4].childNodes[0].nodeValue;
+		 
+		 
+		  
 		}
+		
+		function price(xml){
+			var xmlDoc = xml.responseXML;
+			var chartprice = document.getElementById("chart1").innerHTML =
+			xmlDoc.getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+
+		}
+		
+		
 		</script>
 		
 		<header class="cd-header">
 		<!-- Logo Placeholder -->
 		<div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+
 
 		<nav class="cd-main-nav">
 			<ul>
@@ -63,17 +82,17 @@
 				<h2 class="subHead text-center">Selection of Oddities</h2>
 				<div class="row">
 					<div class="col-md-4">
-						<img class="img-circle" src="http://media.firebox.com/pic/p6970_column_grid_3.jpg"/>
+						<img class="img-circle odds" src="http://media.firebox.com/pic/p6970_column_grid_3.jpg"/>
 						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 					</div>
 
 					<div class="col-md-4">
-						<img class="img-circle" src="http://media.firebox.com/pic/p7433_column_grid_3.jpg"/>
+						<img class="img-circle odds" src="http://media.firebox.com/pic/p7433_column_grid_3.jpg"/>
 						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 					</div>
 
 					<div class="col-md-4">
-						<img class="img-circle" src="http://media.firebox.com/pic/p7267_column_grid_3.jpg"/>
+						<img class="img-circle odds" src="http://media.firebox.com/pic/p7267_column_grid_3.jpg"/>
 						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 					</div>
 				</div>
@@ -104,9 +123,9 @@
 					<div class="col-md-6">
 						<a href="#0">
 							<div id="subCont1">
-								<img class="img-rounded" src="http://media.firebox.com/pic/p7433_column_grid_3.jpg" width="40%" height="100%"/>
+								<img class="img-rounded" src="http://media.firebox.com/pic/p5988_column_grid_3.jpg" width="40%" height="100%"/>
 								<p id="prod2" class="edChoice text-center"></p>
-								<p class="itemType text-center">Gifts</p>
+								<p id="type2" class="itemType text-center"></p>
 							</div>
 						</a>
 					</div>
@@ -162,7 +181,40 @@
 
 		<div class="cd-scrolling-bg cd-color-1">
 			<div class="container">
-		
+				
+		<p id="chart1"></p>
+	
+		<canvas id="mycanvas" width="500" height="500">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#mycanvas").get(0).getContext("2d");
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: 270,
+						color: "cornflowerblue",
+						highlight: "lightskyblue",
+						label: "Corn Flower Blue"
+					},
+					{
+						value: 50,
+						color: "lightgreen",
+						highlight: "yellowgreen",
+						label: "Lightgreen"
+					},
+					{
+						value: 40,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Orange"
+					}
+				];
+				//draw
+				var piechart = new Chart(ctx).Doughnut(data);
+			});
+		</script>
+	
 			</div> <!-- cd-container -->
 		</div> <!-- cd-scrolling-bg -->
 
@@ -170,7 +222,10 @@
 			<h2>Lorem ipsum dolor sit amet.</h2>
 		</div> <!-- cd-fixed-bg -->
 	</main> <!-- cd-main-content -->
-		<script src="js/jquery-2.1.4.js"></script>
-		<script src="js/main.js"></script>
+
+		
+		<div class="cd-footer">
+			
+		</div>
 	</body>
 </html>
