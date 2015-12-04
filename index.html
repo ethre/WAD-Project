@@ -7,16 +7,63 @@
 		<link rel="stylesheet" href="css/bootstrap.css"><!-- Twitter Bootstrap -->
 		<link rel="stylesheet" href="css/style.css"><!-- Our Styles -->
 		<link rel="stylesheet" href="css/reset.css"><!-- CSS reset -->
-		<link rel="stylesheet" href="css/scroll.css"><!-- Fixed Alternate Image Scroll -->
-		<script src="js/Chart.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/modernizr.js"></script> 
-		<script src="js/jquery-2.1.4.js"></script>
-		<script src="js/main.js"></script>
+		<link rel="stylesheet" href="css/scroll.css"><!-- Scroll CSS -->
+		<script src="fadein.js"></script><!-- Short fade in preloade -->
+		<script src="js/Chart.js"></script><!-- Chart Javascript -->
+		<script src="js/bootstrap.js"></script><!-- Bootstrap Javascript -->
+		<script src="js/modernizr.js"></script> <!-- Modernizr -->
+		<script src="js/jquery-2.1.4.js"></script><!-- JQuery declared once on top and once on the bottom to run both Chart and Preloader -->
+		<script src="js/main.js"></script><!-- Main Javascript -->
+	
+	
+	<!-- Ajax used for images/grey div -->
+	<script>
+		
+            var XMLHttpRequestObject = false;
+            if(window.XMLHttpRequest){
+                
+                XMLHttpRequestObject = new XMLHttpRequest();
+                
+            }
+            else if(window.ActiveXObject){
+                XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+            
+            }
+            
+            function getData(datasource, divID){
+                
+                if(XMLHttpRequestObject){
+                    var obj = document.getElementById(divID);
+                    XMLHttpRequestObject.open("GET",datasource,true);
+                    XMLHttpRequestObject.onreadystatechange= 
+                    function (){
+                        
+                        if(XMLHttpRequestObject.readyState==4 && XMLHttpRequestObject.status==200){
+                            obj.innerHTML=XMLHttpRequestObject.responseText;
+
+                        }
+                        
+                    }
+                  
+                    XMLHttpRequestObject.send(null);
+                    
+                }
+
+            }
+	</script>
+
+
+
 
 	</head>
 	<body>
+	
 		
+<audio controls>
+  <source src="js/kncoking.ogg" type="audio/ogg">
+  <source src="js/knocking.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 		
 		<!-- Pulls info from XML -->
 		<script>
@@ -32,11 +79,15 @@
 
 		function myFunction(xml) {
 		    var xmlDoc = xml.responseXML;
+		    // Product 1 XML Retieval
 		    document.getElementById("prod1").innerHTML =
 		    xmlDoc.getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
 		    document.getElementById("type1").innerHTML =
 		    xmlDoc.getElementsByTagName("TYPE")[0].childNodes[0].nodeValue;
+		    document.getElementById("modalDesc").innerHTML = 
+		    xmlDoc.getElementsByTagName("DESC")[0].childNodes[0].nodeValue;
 		    
+		   	// Product 2 XML Retieval
 		    document.getElementById("prod2").innerHTML =
 		    xmlDoc.getElementsByTagName("TITLE")[4].childNodes[0].nodeValue;
 		    document.getElementById("type2").innerHTML =
@@ -59,7 +110,35 @@
 		<header class="cd-header">
 		<!-- Logo Placeholder -->
 		<div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
-
+		
+		<!-- !important, this is where the login form is -->
+		<!-- Easy Z Modal for Login -->
+		 <div id="logIn" class="ezmodal" ezmodal-width="300">
+	            <div class="ezmodal-container" style="background: #605E68;">
+	                <div class="ezmodal-header" style="border-bottom: 1px solid #29282F;">
+	                    <div class="ezmodal-close" style="text-shadow: none;" data-dismiss="ezmodal">x</div>
+	                    <p style="color: #fff;">Login</p>
+	                </div>
+	                <div class="ezmodal-content">
+	                	<form role="form">
+	                		<div class="form-group">
+	                			<label for="Email" style="color: #fff">Email Address</label>
+	                			<input type="email" class="form-control" id="email">
+	                		</div>
+	                		<div class="form-group">
+	                			<label for="pwd" style="color: #fff">Password</label>
+	                			<input type="password" class="form-control" id="pwd">
+	                		</div>
+	                		<div class="checkbox">
+							    <label style="color: #fff"><input type="checkbox"> Remember me</label>
+							</div>
+	                	</form>
+	                </div>
+	                <div class="ezmodal-footer" style="background: #1D1C21; border-top: none;">
+	                	<button type="submit" class="btn btn-primary">Login</button> 
+	                </div>
+	            </div>
+	      </div>
 
 		<nav class="cd-main-nav">
 			<ul>
@@ -67,18 +146,19 @@
 				<li><a href="#0">Home</a></li>
 				<li><a href="#0">About</a></li>
 				<li><a href="#0">Products</a></li>
-				<li><a href="#0">Login</a></li>
+				<li><a href="#0" ezmodal-target="#logIn">Login</a></li>
 			</ul>
 		</nav> <!-- cd-main-nav -->
 	</header>
 
 	<main class="cd-main-content">
 		<div class="cd-fixed-bg cd-bg-1">
-			<h1>I Couldn't Stand How it Looked lolol</h1>
+			<h1>I Can Kind of Stand How it Looks lolol</h1>
 		</div> <!-- cd-fixed-bg -->
 
 		<div class="cd-scrolling-bg cd-color-2">
 			<div class="container text-center">
+        
 				<h2 class="subHead text-center">Selection of Oddities</h2>
 				<div class="row">
 					<div class="col-md-4">
@@ -107,11 +187,28 @@
 		<div class="cd-scrolling-bg cd-color-3">
 			<div class="container">
 			<!-- Add Content Here -->
-			<!-- itemType's potentially XML? -->
+			
+			<!-- Easy Z Modal for Product 1 -->
+			 <div id="p1" class="ezmodal" ezmodal-width="400">
+		            <div class="ezmodal-container">
+		                <div class="ezmodal-header">
+		                    <div class="ezmodal-close" data-dismiss="ezmodal">x</div>
+		                    Unicorn Tears Gin Liqueur
+		                </div>
+		                <div class="ezmodal-content">
+		                	<img class="img-rounded" src="http://media.firebox.com/pic/p6970_column_grid_3.jpg" width="40%" height="100%"/>
+		                	<img class="img-rounded" style="position: relative; left: 70px;" src="img/unicorn2.jpg" width="40%" height="100%"/>
+        			       	<p id="modalDesc" style="position: relative;font-size: 15px; top: 10px;" class=""></p>
+		                </div>
+		                <div class="ezmodal-footer">
+		                	<button type="button" class="btn btn-success" style="position: relative; left: 10px;">Add to Cart</button> 
+		                </div>
+		            </div>
+		        </div>
 			<h2 class="subHead text-center">Discover Items this Season</h2>
 				<div class="row">
 					<div class="col-md-6">
-						<a href="#0">
+						<a href="#0" ezmodal-target="#p1">
 							<div id="subCont1">
 								<img class="img-rounded" src="http://media.firebox.com/pic/p6970_column_grid_3.jpg" width="40%" height="100%"/>
 								<p id="prod1" class="edChoice text-center"></p>
@@ -181,40 +278,67 @@
 
 		<div class="cd-scrolling-bg cd-color-1">
 			<div class="container">
-				
-		<p id="chart1"></p>
+				<div class="row">
+					<div class="col-md-6">
 	
-		<canvas id="mycanvas" width="500" height="500">
+		<h2 class="subHead text-center">Product Chart</h2> <br /><br />
+	
+		<canvas id="mycanvas" width="400" height="400">
 		<script>
 			$(document).ready(function(){
 				var ctx = $("#mycanvas").get(0).getContext("2d");
 				//pie chart data
 				//sum of values = 360
+				
 				var data = [
 					{
 						value: 270,
-						color: "cornflowerblue",
-						highlight: "lightskyblue",
-						label: "Corn Flower Blue"
+						color: "#4d8066",
+						highlight: "#19b366",
+						label: "Dildos in stock"
 					},
 					{
 						value: 50,
-						color: "lightgreen",
-						highlight: "yellowgreen",
+						color: "#7d9945",
+						highlight: "#669900",
 						label: "Lightgreen"
 					},
 					{
 						value: 40,
-						color: "orange",
-						highlight: "darkorange",
+						color: "#999966",
+						highlight: "#b9b946",
 						label: "Orange"
 					}
 				];
 				//draw
 				var piechart = new Chart(ctx).Doughnut(data);
 			});
-		</script>
 	
+	
+		</script>
+		</div>
+		<div class="col-md-6">
+			<h2 class="subHead text-center" id="ajaxDesc">Choose your product</h2>
+			<div class="targetDiv">
+			<br />
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc.txt','ajaxDesc')"/>
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc2.txt','ajaxDesc')"/>
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc3.txt','ajaxDesc')"/>
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc.txt','ajaxDesc')"/>
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc.txt','ajaxDesc')"/>
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc.txt','ajaxDesc')"/>
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc.txt','ajaxDesc')"/>
+				<img class="img-rounded" id="woofwoof padding" src="anything.jpg" onmouseover="getData('AjaxD/ajaxdesc.txt','ajaxDesc')"/>
+				
+				<audio controls autoplay loop>
+				  <source src="js/knocking.ogg" type="audio/ogg">
+				  <source src="js/knocking.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio> 
+				
+					</div>
+				</div>
+			</div>
 			</div> <!-- cd-container -->
 		</div> <!-- cd-scrolling-bg -->
 
@@ -225,7 +349,11 @@
 
 		
 		<div class="cd-footer">
-			
+				
 		</div>
+		<!-- Bottom declaration of jQuery required for functioning preloader -->
+		<script src="js/jquery-2.1.4.js"></script><!-- JQuery -->
+		<script src="js/main.js"></script><!-- Main Javascript -->
+	
 	</body>
 </html>
