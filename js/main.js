@@ -210,179 +210,145 @@ function preloader(immune, background, color) {
   }
   $(window).load(function() {
     setTimeout(function() {
-      $('.preloader').fadeOut(2000);
-    }, 2000);
+      $('.preloader').fadeOut(1000);
+    }, 1000);
     setTimeout(function() {
       $('.preloader').remove();
-    }, 3000);
+    }, 2000);
     
   })
 };
 
 preloader(true, 'black', 'red');
 
-//peekA-Bar js
-;(function($) {
+/*
+ *
+ * jQuery Smooth Scroll
+ *
+ */
+ $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
 
-	/** Enable strict mode. */
-	'use strict';
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
 
-	$.peekABar = function(options) {
+jQuery(document).ready(function($){
+	// browser window scroll (in pixels) after which the "back to top" link is shown
+	var offset = 300,
+		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+		offset_opacity = 1200,
+		//duration of the top scrolling animation (in ms)
+		scroll_top_duration = 700,
+		//grab the "back to top" link
+		$back_to_top = $('.cd-top');
 
-		var that = this,
-			rand = parseInt(Math.random() * 100000000, 0);
+	//hide or show the "back to top" link
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+		if( $(this).scrollTop() > offset_opacity ) { 
+			$back_to_top.addClass('cd-fade-out');
+		}
+	});
 
-		/** Instance */
-		this.bar = {};
-
-		/** Settings */
-		this.settings = {};
-
-		/** Defaults */
-		var defaults = {
-			html: 'Your Message Here',
-			delay: 3000,
-			autohide: false,
-			padding: '1em',
-			backgroundColor: 'rgb(195, 195, 195)',
-			animation: {
-				type: 'slide',
-				duration: 'slow'
-			},
-			cssClass: null,
-			opacity: '1',
-			position: 'top',
-
-			onShow: function() {},
-			onHide: function() {},
-
-			closeOnClick: false
-		};
-
-		/** Initialise the plugin */
-		var init = function() {
-			that.settings = $.extend({}, defaults, options);
-			_create();
-			_applyCustomSettings();
-		};
-
-		/** Show the Bar */
-		this.show = function(args) {
-			if(args !== undefined) {
-				if(args.html) {
-					this.bar.html(args.html);
-				}
-			}
-			switch (this.settings.animation.type) {
-				case 'slide':
-					this.bar.slideDown(that.settings.animation.duration);
-					break;
-				case 'fade':
-					this.bar.fadeIn(that.settings.animation.duration);
-					break;
-			}
-			if(this.settings.autohide) {
-				setTimeout(function () {
-					that.hide();
-				}, this.settings.delay);
-			}
-			this.settings.onShow.call(this, args);
-		};
-
-		/** Hide the Bar */
-		this.hide = function() {
-			switch (this.settings.animation.type) {
-				case 'slide':
-					this.bar.slideUp(that.settings.animation.duration);
-					break;
-				case 'fade':
-					this.bar.fadeOut(that.settings.animation.duration);
-					break;
-			}
-			this.settings.onHide.call(this);
-		};
-
-		/** Create the Bar */
-		var _create = function() {
-			that.bar = $('<div></div>').addClass('peek-a-bar').attr('id', '__peek_a_bar_' + rand);
-			$('html').append(that.bar);
-			that.bar.hide();
-		};
-
-		/** Apply Custom Bar Settings */
-		var _applyCustomSettings = function() {
-			_applyHTML();
-			_applyAutohide();
-			_applyPadding();
-			_applyBackgroundColor();
-			_applyOpacity();
-			_applyCSSClass();
-			_applyPosition();
-			_applyCloseOnClick();
-		};
-
-		/** Set Custom Bar HTML */
-		var _applyHTML = function() {
-			that.bar.html(that.settings.html);
-		};
-
-		/** Autohide the Bar */
-		var _applyAutohide = function() {
-			if(that.settings.autohide) {
-				setTimeout(function () {
-					that.hide();
-				}, that.settings.delay);
-			}
-		};
-
-		/** Apply Padding */
-		var _applyPadding = function() {
-			that.bar.css('padding', that.settings.padding);
-		};
-
-		/** Apply Background Color */
-		var _applyBackgroundColor = function() {
-			that.bar.css('background-color', that.settings.backgroundColor);
-		};
-
-		/** Apply Custom CSS Class */
-		var _applyCSSClass = function() {
-			if(that.settings.cssClass !== null) {
-				that.bar.addClass(that.settings.cssClass);
-			}
-		};
-
-		/** Apply Opacity */
-		var _applyOpacity = function() {
-			that.bar.css('opacity', that.settings.opacity);
-		};
-
-		/** Apply Position where the Bar should be shown */
-		var _applyPosition = function() {
-			switch(that.settings.position) {
-				case 'top':
-					that.bar.css('top', 0);
-					break;
-				case 'bottom':
-					that.bar.css('bottom', 0);
-					break;
-				default:
-					that.bar.css('top', 0);
-			}
-		};
-
-		/** Close the bar on click */
-		var _applyCloseOnClick = function() {
-			if(that.settings.closeOnClick) {
-				that.bar.click(function() {
-					that.hide();
-				});
-			}
-		};
-
-		init();
-
-		return this;
-	}
+	//smooth scroll to top
+	$back_to_top.on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: 0 ,
+		 	}, scroll_top_duration
+		);
+	});
 
 });
+
+jQuery(document).ready(function($){
+	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	var $L = 1200,
+		$menu_navigation = $('#main-nav'),
+		$cart_trigger = $('#cd-cart-trigger'),
+		$hamburger_icon = $('#cd-hamburger-menu'),
+		$lateral_cart = $('#cd-cart'),
+		$shadow_layer = $('#cd-shadow-layer');
+
+	//open lateral menu on mobile
+	$hamburger_icon.on('click', function(event){
+		event.preventDefault();
+		//close cart panel (if it's open)
+		$lateral_cart.removeClass('speed-in');
+		toggle_panel_visibility($menu_navigation, $shadow_layer, $('body'));
+	});
+
+	//open cart
+	$cart_trigger.on('click', function(event){
+		event.preventDefault();
+		//close lateral menu (if it's open)
+		$menu_navigation.removeClass('speed-in');
+		toggle_panel_visibility($lateral_cart, $shadow_layer, $('body'));
+	});
+
+	//close lateral cart or lateral menu
+	$shadow_layer.on('click', function(){
+		$shadow_layer.removeClass('is-visible');
+		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+		if( $lateral_cart.hasClass('speed-in') ) {
+			$lateral_cart.removeClass('speed-in').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').removeClass('overflow-hidden');
+			});
+			$menu_navigation.removeClass('speed-in');
+		} else {
+			$menu_navigation.removeClass('speed-in').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').removeClass('overflow-hidden');
+			});
+			$lateral_cart.removeClass('speed-in');
+		}
+	});
+
+	//move #main-navigation inside header on laptop
+	//insert #main-navigation after header on mobile
+	move_navigation( $menu_navigation, $L);
+	$(window).on('resize', function(){
+		move_navigation( $menu_navigation, $L);
+		
+		if( $(window).width() >= $L && $menu_navigation.hasClass('speed-in')) {
+			$menu_navigation.removeClass('speed-in');
+			$shadow_layer.removeClass('is-visible');
+			$('body').removeClass('overflow-hidden');
+		}
+
+	});
+});
+
+function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
+	if( $lateral_panel.hasClass('speed-in') ) {
+		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+		$lateral_panel.removeClass('speed-in').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			$body.removeClass('overflow-hidden');
+		});
+		$background_layer.removeClass('is-visible');
+
+	} else {
+		$lateral_panel.addClass('speed-in').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			$body.addClass('overflow-hidden');
+		});
+		$background_layer.addClass('is-visible');
+	}
+}
+
+function move_navigation( $navigation, $MQ) {
+	if ( $(window).width() >= $MQ ) {
+		$navigation.detach();
+		$navigation.appendTo('header');
+	} else {
+		$navigation.detach();
+		$navigation.insertAfter('header');
+	}
+}

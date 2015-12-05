@@ -1,18 +1,40 @@
 <?xml version="1.0" encoidng="utf-8"?>
 <rss version="2.0">
 <channel>
-    
 <title>MakeUseOf RSS Feed</title>
 <link>http://www.makeuseof.com/</link>
 <description>Cool websites, software and internet tips</description>
-
-<item>
+<language>en-us</language>
+<image>
     <title>Enter Title</title>
-    <link>Link to the entry</link>
-    <guid>http://example.com/item/123</guid>
-    <pubDate>Tue,1 December 2015 15:20:20 GMT</pubDate>
-    <description>[CDATA[ This is the description.]]</description>
+    <link>http://www.makeuseof.com</link>
+    <url>http://www.cheshirelife.co.uk/polopoly_fs/7.187783.1421427545!/rss.png</url>
+    <width>150</width>
+    <height>124</height>
+</image>
+<item>
+    <title>New Vader Mask!</title>
+    <pubDate>Tue,23 November 2015 15:20:20 GMT</pubDate>
+    <link>http://www.makeuseof.com</link>
+    <description>[CDATA[ Bshuuum-bzzzz-bshhuum! Be cool like vader, pre-order now!]]</description>
 </item>
-
+<item>
+    <title>Sausage</title>
+    <pubDate>Tue,1 December 2015 17:25:20 GMT</pubDate>
+    <link>http://www.makeuseof.com</link>
+    <description>[CDATA[ We bet you have your own, but ours is not bad.]]</description>
+</item>
+<item>
+    <title>Nothing</title>
+    <pubDate>Wed,2 December 2015 16:20:20 GMT</pubDate>
+    <link>http://www.makeuseof.com</link>
+    <description>[CDATA[ Grant someone Gift of Nothing... literally nothing....]]</description>
+</item>
+<item>
+    <title>Laboratory Shot Glasses</title>
+    <pubDate>Thur,3 December 2015 15:20:20 GMT</pubDate>
+    <link>http://www.makeuseof.com</link>
+    <description>[CDATA[ Feel like a champ... I mean scientist and enjoy your shots in this tiny cute shot glass.]]</description>
+</item>
 </channel>
 </rss>
