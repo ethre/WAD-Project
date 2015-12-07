@@ -3,8 +3,8 @@
 $q=$_GET["q"];
 
 //find out which feed was selected
-if($q=="Google") {
-  $xml=("google.xml");
+if($q=="RecordRSS") {
+  $xml=("rss2.xml");
 } elseif($q=="NBC") {
   $xml=("http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml");
 }

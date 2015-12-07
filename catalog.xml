@@ -2,169 +2,98 @@
 <CATALOG>
 	<PRODUCT>
 		<TITLE>Unicorn Tears Gin Liqueur</TITLE>
-		<DESC>1. Bringing you this enchantingly scrumptious Gin Liqueur has been no easy feat.</DESC>
+		<DESC>Bringing you this enchantingly scrumptious Gin Liqueur has been no easy feat.</DESC>
 		<COUNTRY>USA</COUNTRY>
-		<PRICE>56.79</PRICE>
+		<PRICE>$56.79</PRICE>
 		<TYPE>UNISEX</TYPE>
 	</PRODUCT>
 	<PRODUCT>
 		<TITLE>Stress Sausage</TITLE>
-		<DESC>2. Bringing you this enchantingly scrumptious Gin Liqueur has been no easy feat.</DESC>
+		<DESC>Squish away your stress with these marvellous meat packages. With three varieties of pork sword to choose from, simply squeeze away any unwanted emotions.</DESC>
 		<COUNTRY>USA</COUNTRY>
-		<PRICE>11.00</PRICE>
-		<TYPE>For Him</TYPE>
+		<PRICE>$11.00</PRICE>
+		<TYPE>FOR HIM</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Secret Santa Box</TITLE>
-		<DESC>3. Bringing you this enchantingly scrumptious Gin Liqueur has been no easy feat.</DESC>
+		<TITLE>Ugly Chrismtas Sweater Kit</TITLE>
+		<DESC>The Ugly Christmas Sweater Kit includes a quality cotton crew-neck sweater and all the decorations needed to craft something gloriously festive, jolly and hideous.</DESC>
 		<COUNTRY>UK</COUNTRY>
-		<PRICE>20.90</PRICE>
+		<PRICE>$41.69</PRICE>
 		<TYPE>CHRISTMAS</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Emoji Pillow</TITLE>
-		<DESC>4. Bringing you this enchantingly scrumptious Gin Liqueur has been no easy feat.</DESC>
+		<TITLE>Star Wars 3D Wall Lights</TITLE>
+		<DESC>Available in 2 styles, these eye-catching lights are going to light up the dark side of your house. Quite literally. With no wires or cables you can also pretend they're powered by 'the force', which is of course hilarious.</DESC>
 		<COUNTRY>USA</COUNTRY>
-		<PRICE>10.90</PRICE>
-		<TYPE>FOR HIM</TYPE>
+		<PRICE>$69.49</PRICE>
+		<TYPE>NERDY</TYPE>
 	</PRODUCT>
 	<PRODUCT>
 		<TITLE>Magical Unicorn Slippiers</TITLE>
-		<DESC>5. Bringing you this enchantingly scrumptious Gin Liqueur has been no easy feat.</DESC>
+		<DESC>What we all need is a bit of enchantment in our daily movements. These plush Magical Unicorn Slippers are just the trick.</DESC>
 		<COUNTRY>UK</COUNTRY>
-		<PRICE>9.00</PRICE>
+		<PRICE>$9.00</PRICE>
 		<TYPE>FOR HER</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Coffee Maker</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>85.90</PRICE>
-		<TYPE>FOR HER</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Stress Mushroom</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>10.90</PRICE>
-		<TYPE>FOR HIM</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Star Wars Origami</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>20.10</PRICE>
-		<TYPE>FOR HIM</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Magical Unicorn Mug</TITLE>
-		<COUNTRY>Pickwick</COUNTRY>
-		<PRICE>8.50</PRICE>
-		<TYPE>FOR HER</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Romanza</TITLE>
-		<COUNTRY>EU</COUNTRY>
-		<PRICE>10.80</PRICE>
-		<TYPE>QUIRKY</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Blade Runner Whiskey Glass</TITLE>
-		<COUNTRY>USA</COUNTRY>
-		<PRICE>134.70</PRICE>
-		<TYPE>FOR HIM</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Black angel Figurine</TITLE>
-		<COUNTRY>EU</COUNTRY>
-		<PRICE>10.90</PRICE>
-		<TYPE>FOR HER</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Star Wars 3D Metal Model Kit</TITLE>
-		<COUNTRY>USA</COUNTRY>
-		<PRICE>10.20</PRICE>
-		<TYPE>FOR HIM</TYPE>
 	</PRODUCT>
 	<PRODUCT>
 		<TITLE>Obama Llama</TITLE>
+		<DESC>Oozing the weirdest, most wonderfulest rhymes you’ve ever heard, your job is to mime, act out and describe these rhymes while other players get over excited, shriek answers at you and possibly self combust.</DESC>
 		<COUNTRY>UK</COUNTRY>
-		<PRICE>8.70</PRICE>
+		<PRICE>$27.79</PRICE>
+		<TYPE>GAMES</TYPE>
+	</PRODUCT>
+	<PRODUCT>
+		<TITLE>Unicorn Rainbow Poop Cookies</TITLE>
+		<COUNTRY>UK</COUNTRY>
+		<PRICE>$6.99</PRICE>
 		<TYPE>FOR HIM</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Big Willie style</TITLE>
-		<COUNTRY>USA</COUNTRY>
-		<PRICE>9.90</PRICE>
+		<TITLE>The Chaos Machine</TITLE>
+		<COUNTRY>UK</COUNTRY>
+		<PRICE>$99.99</PRICE>
+		<TYPE>FOR HIM</TYPE>
+	</PRODUCT>
+	<PRODUCT>
+		<TITLE>The Legend of Zelda Hylian Shield</TITLE>
+		<COUNTRY>Pickwick</COUNTRY>
+		<PRICE>$299.99</PRICE>
 		<TYPE>FOR HER</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Tupelo Honey</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>8.20</PRICE>
-		<TYPE>FOR HIM</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>SoulsVille Mug</TITLE>
-		<COUNTRY>Norway</COUNTRY>
-		<PRICE>30.90</PRICE>
-		<TYPE>FOR HIM</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Marmite Chocolate</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>8.90</PRICE>
-		<TYPE>UNISEX</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Blobfish Slippers</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>8.90</PRICE>
+		<TITLE>Darth Vader Melted Helmet Replica</TITLE>
+		<COUNTRY>EU</COUNTRY>
+		<PRICE>$155.99</PRICE>
 		<TYPE>QUIRKY</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Bridge of Spies</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>7.90</PRICE>
-		<TYPE>FOR HER</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Private Dancer</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>8.90</PRICE>
+		<TITLE>Rough Hand Scrub For Men</TITLE>
+		<COUNTRY>USA</COUNTRY>
+		<PRICE>$11.95</PRICE>
 		<TYPE>FOR HIM</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Midt om natten Mittens</TITLE>
+		<TITLE>Laboratory Shot Glasses</TITLE>
 		<COUNTRY>EU</COUNTRY>
-		<PRICE>7.80</PRICE>
+		<PRICE>$10.90</PRICE>
 		<TYPE>FOR HER</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Screen Protector</TITLE>
-		<COUNTRY>UK</COUNTRY>
-		<PRICE>9.90</PRICE>
-		<TYPE>UNISEX</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Strip Grip for Phones</TITLE>
+		<TITLE>Motion Activated Toilet Night Lightt</TITLE>
 		<COUNTRY>USA</COUNTRY>
-		<PRICE>7.90</PRICE>
-		<TYPE>UNISEX</TYPE>
+		<PRICE>$10.20</PRICE>
+		<TYPE>FOR HIM</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Picture book</TITLE>
-		<COUNTRY>EU</COUNTRY>
-		<PRICE>7.20</PRICE>
-		<TYPE>FOR HER</TYPE>
-	</PRODUCT>
-	<PRODUCT>
-		<TITLE>Colouring Book</TITLE>
+		<TITLE>Light Up Fiber Optic Jacket</TITLE>
 		<COUNTRY>UK</COUNTRY>
-		<PRICE>5.80</PRICE>
-		<TYPE>FOR HER</TYPE>
+		<PRICE>$129.99</PRICE>
+		<TYPE>GAMES</TYPE>
 	</PRODUCT>
 	<PRODUCT>
-		<TITLE>Hatching Dino Candle</TITLE>
+		<TITLE>Hotline Bling Ugly Christmas Sweater</TITLE>
 		<COUNTRY>USA</COUNTRY>
-		<PRICE>8.20</PRICE>
-		<TYPE>QUIRKY</TYPE>
+		<PRICE>$49.99</PRICE>
+		<TYPE>FOR HER</TYPE>
 	</PRODUCT>
 </CATALOG>

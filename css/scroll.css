@@ -89,16 +89,16 @@ Main components
   color: white;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url("../img/cd-background-2.jpg");
+  background-image: url("../img/background1.png");
 }
 .cd-fixed-bg.cd-bg-2 {
-  background-image: url("http://www.photography-match.com/views/images/gallery/Christmas_44.jpg");
+  background-image: url("../img/background2.png");
 }
 .cd-fixed-bg.cd-bg-3 {
-  background-image: url("../img/cd-background-3.jpg");
+  background-image: url("../img/background3.png");
 }
 .cd-fixed-bg.cd-bg-4 {
-  background-image: url("../img/cd-background-4.jpg");
+  background-image: url("../img/background4.png");
 }
 @media only screen and (min-width: 768px) {
   .cd-fixed-bg h1, .cd-fixed-bg h2 {
