@@ -44,27 +44,27 @@
             }
 	</script>
 	
-		<script>
+			<script>
 			function showRSS(str) {
-			if (str.length==0) { 
-		    document.getElementById("rssOutput").innerHTML="";
-		    return;
+			  if (str.length==0) { 
+			    document.getElementById("rssOutput").innerHTML="";
+			    return;
 			  }
 			  if (window.XMLHttpRequest) {
-		  // code for IE7+, Firefox, Chrome, Opera, Safari
-			  xmlhttp=new XMLHttpRequest();
+			    // code for IE7+, Firefox, Chrome, Opera, Safari
+			    xmlhttp=new XMLHttpRequest();
 			  } else {  // code for IE6, IE5
-			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 			  }
 			  xmlhttp.onreadystatechange=function() {
-			  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-			  document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
+			    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+			      document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
 			    }
 			  }
-			 xmlhttp.open("GET","getrss.php?q="+str,true);
-			 xmlhttp.send();
-			 }
-		</script>
+			  xmlhttp.open("GET","getrss.php?q="+str,true);
+			  xmlhttp.send();
+			}
+			</script>
 
 		<script type="text/javascript">
 		
@@ -730,7 +730,7 @@
 							<input type="text-name" class="form-control" name="namanya" />
 							<h1 class="text-center" style="font-family: verdana; font-size: 20px; color: #fff;">Comment</h1>
 							<input type="text-comment" class="form-control" name="commentnya"/>
-							<input name="submit" class="btn-lg btn-info" type="submit" style="padding-top: 5px;"/>
+							<input name="submit" class="btn btn-info" type="submit" style="padding-top: 5px;"/>
 			 			</form>
 					</div>
 					<div class="col-md-4"></div>
